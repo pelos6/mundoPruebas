@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+	<title>mongo</title>
+	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<style type="text/css">
+		body {
+			background-color: #EEE;
+			margin: 2em 0;
+			font-size: 12pt;
+			font-family: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans GB", sans-serif;
+			line-height: 150%;
+		}
+		blockquote {
+			font-size: inherit;
+		}
+		#container {
+			background-color: #FFF;
+			/*box-shadow: 0px 0px 10px #CCC;*/
+			/*border: 3px solid #DDD;*/
+			padding: 1em 2em;
+			box-shadow: 0 0 0.5em #e6e6e6 inset,0 0 0 1px #d3d3d3;
+			border-radius: 0.5em;
+			margin-bottom: 1em;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			border-bottom: 1px solid #EEE;
+			padding-bottom: 0.25em;
+			font-weight: bold;
+			margin-top: 1em;
+		}
+		img {
+			border: 3px solid #e6e6e6;
+			padding: 1em;
+			box-shadow: 0px 0px 10px #d3d3d3;
+		}
+		.contents
+		{
+   			 float: right
+		}
+		@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+			img { zoom: 0.5; }
+		}
+	</style>
+</head>
+<body>
+	<div id="container" class="container">
+	<p class="contents"><a name="arriba" href="miMundo.html">Mi Mundo</a></p>
+		<p><a href="inicio.html">inicio</a> / <a href="miMundo.html">mi mundo</a> / <a href="programacion.html">programacion</a> / mongo </p>
+<h1 id="mongo"><a name="user-content-mongo" href="#mongo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mongo</h1>
+<!-- MarkdownTOC -->
+
+<ul>
+<li><a href="#proposito">Proposito</a></li>
+<li><a href="#consola-de-mongodb">Consola de mongodb</a></li>
+<li><a href="#mongodb">mongoDB</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+
+<p>Se instala como parte de meteor.</p>
+<ul>
+<li>Sobre un curso de coursera </li>
+<li>Es necesario un servidor para lanzar el programa que lo lleva el propio meteor</li>
+<li>recursos<ul>
+<li><a href="https://www.mongodb.com">web de mongo </a></li>
+</ul>
+</li>
+</ul>
+<h1 id="proposito"><a name="user-content-proposito" href="#proposito" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Proposito</h1>
+<p>Trastear con esta base de dato no sql parte de MEAN </p>
+<h1 id="consola-de-mongodb"><a name="user-content-consola-de-mongodb" href="#consola-de-mongodb" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Consola de mongodb</h1>
+<p>meteor mongo</p>
+<h1 id="mongodb"><a name="user-content-mongodb" href="#mongodb" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>mongoDB</h1>
+<p>Instalo uMongo ligera y eficiente<br />
+<a href="http://edgytech.com/umongo/">http://edgytech.com/umongo/</a></p>
+<p>desde el directorio donde se lanza meteor para que corra la aplicación<br />
+<pre><code>meteor mongo  
+show databases 
+</code></pre><br />
+ para ver las bases de datos que tenemos<br />
+<pre><code>meteor:PRIMARY&gt; show collections
+chats
+meteor_accounts_loginServiceConfiguration
+system.indexes
+users
+</code></pre></p>
+<p><pre><code>db 
+</code></pre><br />
+dice la que estas usando<br />
+<pre><code>use &lt;nombre base de datos&gt; 
+</code></pre></p>
+<p>cambia de base de datos<br />
+<pre><code>db.users.find().pretty()  
+</code></pre><br />
+muestra el contenido de esa colección formateado chulo.<br />
+<pre><code>db.users.find().count()   
+</code></pre><br />
+el número de registros.<br />
+<pre><code>show collections   
+</code></pre><br />
+muestra las colecciones <br />
+<pre><code>db.&lt;nombreCollection&gt;remove()
+</code></pre><br />
+o mejor drop()</p>
+
+	<a href="#arriba" class="contents">arriba</a>
+	</div>
+	<footer class="container">
+		<p class="text-muted text-center">
+			notas para javier  
+		</p>
+	</footer>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready( function() {
+	$('table').addClass('table table-bordered');
+});
+</script>

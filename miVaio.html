@@ -1,0 +1,175 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+	<title>miVaio</title>
+	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<style type="text/css">
+		body {
+			background-color: #EEE;
+			margin: 2em 0;
+			font-size: 12pt;
+			font-family: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans GB", sans-serif;
+			line-height: 150%;
+		}
+		blockquote {
+			font-size: inherit;
+		}
+		#container {
+			background-color: #FFF;
+			/*box-shadow: 0px 0px 10px #CCC;*/
+			/*border: 3px solid #DDD;*/
+			padding: 1em 2em;
+			box-shadow: 0 0 0.5em #e6e6e6 inset,0 0 0 1px #d3d3d3;
+			border-radius: 0.5em;
+			margin-bottom: 1em;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			border-bottom: 1px solid #EEE;
+			padding-bottom: 0.25em;
+			font-weight: bold;
+			margin-top: 1em;
+		}
+		img {
+			border: 3px solid #e6e6e6;
+			padding: 1em;
+			box-shadow: 0px 0px 10px #d3d3d3;
+		}
+		.contents
+		{
+   			 float: right
+		}
+		@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+			img { zoom: 0.5; }
+		}
+	</style>
+</head>
+<body>
+	<div id="container" class="container">
+	<p class="contents"><a name="arriba" href="miMundo.html">Mi Mundo</a></p>
+		<p><a href="inicio.html">inicio</a> / <a href="miMundo.html">mi mundo</a> /Mi Vaio </p>
+<h1 id="mi-vaio"><a name="user-content-mi-vaio" href="#mi-vaio" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mi VAIO</h1>
+<!-- MarkdownTOC -->
+
+<ul>
+<li><a href="#propósito">Propósito</a></li>
+<li><a href="#información-general">información general</a></li>
+<li><a href="#bateria">Bateria</a></li>
+<li><a href="#arranque-dual-para-ubuntu-y-windows-8">Arranque dual para ubuntu y Windows 8</a></li>
+<li><a href="#ver-el-disco-de-windows-en-ubuntu">Ver el disco de Windows en Ubuntu</a></li>
+<li><a href="#problemas-al-conectarlo-a-la-corriente">Problemas al conectarlo a la corriente</a></li>
+<li><a href="#actualización-a-windows-10">Actualización a Windows 10</a></li>
+<li><a href="#downgrade-de-windows8--windows7">Downgrade de Windows8  Windows7</a></li>
+<li><a href="#cuando-se-desconfigura-el-teclado-en-ubuntu">Cuando se desconfigura el teclado en ubuntu</a></li>
+<li><a href="#uso-del-disco">Uso del disco</a></li>
+<li><a href="#amplificador-wifi">Amplificador Wifi</a></li>
+<li><a href="#kernel_data_inpage_error">KERNEL_DATA_INPAGE_ERROR</a></li>
+<li><a href="#grub-rescue">grub rescue</a></li>
+<li><a href="#problemas-con-el-sonido">problemas con el sonido</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+
+<h1 id="proposito"><a name="user-content-proposito" href="#proposito" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Propósito</h1>
+<p>Notas para personalizar mi portatil VAIO.<br />
+Es el Vaio que consigo con el contrato con el Banco Santander poniendo mi nomina domiciliada pero con el nombre de Ana Vela dado que el mio esta ya usado en otra oferta similar.<br />
+Contrato de fecha 19/12/2012<br />
+y tiene 30 meses de duración mínim# Así que puedo dar de baja la cuent# <br />
+15/09/2013 no se muestra más información en la web de la cuenta.</p>
+<h1 id="informacion-general"><a name="user-content-informacion-general" href="#informacion-general" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>información general</h1>
+<p>8.0.0.08150<br />
+32bit/64bit<br />
+[InstallationInfo]<br />
+InstalledDate=14/03/2014 13:12:39<br />
+ProductName=VAIO Care<br />
+Version=8.0.0.08150<br />
+ProductGUID={E0F928B4-2BB2-4D7E-B16E-2B202CB58EDE}<br />
+    Product name SVE1512B4E<br />
+    Model SVE151J11M</p>
+<h1 id="bateria"><a name="user-content-bateria" href="#bateria" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Bateria</h1>
+<p>01/02/2016 empieza a dar problemas de bateria.</p>
+<h1 id="arranque-dual-para-ubuntu-y-windows-8"><a name="user-content-arranque-dual-para-ubuntu-y-windows-8" href="#arranque-dual-para-ubuntu-y-windows-8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Arranque dual para ubuntu y Windows 8</h1>
+<p>Con enrique más de 5 horas en su casa.<br />
+Al arrancar windows8 borra o inutiliza el arranque grub para lanzar ubuntu.<br />
+Es necesario cambiar en la bios con el boton ASSIST de EUFI a LEGACY por ejemplo para que diga que no operation system found y luego volverlo a cambiar para que lo encuentre.<br />
+Pero al volver a Windows vuelve a pasar</p>
+<h1 id="ver-el-disco-de-windows-en-ubuntu"><a name="user-content-ver-el-disco-de-windows-en-ubuntu" href="#ver-el-disco-de-windows-en-ubuntu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Ver el disco de Windows en Ubuntu</h1>
+<p><a href="http://www.taringa.net/posts/linux/17202599/Solucion-montar-disco-o-particion-de-Windows-8-con-Linux.html">http://www.taringa.net/posts/linux/17202599/Solucion-montar-disco-o-particion-de-Windows-8-con-Linux.html</a><br />
+<pre><code>powercfg -h off
+</code></pre><br />
+lanzado como administrador.</p>
+<h1 id="problemas-al-conectarlo-a-la-corriente"><a name="user-content-problemas-al-conectarlo-a-la-corriente" href="#problemas-al-conectarlo-a-la-corriente" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Problemas al conectarlo a la corriente</h1>
+<p><a href="https://community.sony.es/t5/pc-accesorios/en-mi-vaio-con-modelo-sve1512b4e-se-apaga-la-pantalla-al/m-p/2084146/thread-id/17525">https://community.sony.es/t5/pc-accesorios/en-mi-vaio-con-modelo-sve1512b4e-se-apaga-la-pantalla-al/m-p/2084146/thread-id/17525</a></p>
+<p>en mi vaio con modelo SVE1512B4E se apaga la pantalla al conectarlo a la corriente.</p>
+<p>Sin embargo si espero a que realmente quede poca bateriay<br />
+ no esta activado ni el ahorro de baterio y el brillo es del 100 % se carga y se sigue viendo</p>
+<h1 id="actualizacion-a-windows-10"><a name="user-content-actualizacion-a-windows-10" href="#actualizacion-a-windows-10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Actualización a Windows 10</h1>
+<p>El 23/12/2015 lo actualiz# Tarda casí una mañana entre la descarga y la instalación pero parece que va bien.<br />
+El plan lo habia cambiado a economizador &hellip;</p>
+<h1 id="downgrade-de-windows8-windows7"><a name="user-content-downgrade-de-windows8-windows7" href="#downgrade-de-windows8-windows7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Downgrade de Windows8  Windows7</h1>
+<p>Abandono esta tarea dado que he actualizado a Windows 8.1 y va mejor.<br />
+Mi maquina es <br />
+Un Sony Vaio <br />
+Vaio Control Center te da la información<br />
+Nombre de modelo   SVE1512B4E<br />
+Número de serie       54513845  002653<br />
+4 Gb de ram<br />
+Pentium cpu B980 2.40 Ghz <br />
+Procesador 64 bit</p>
+<p>Hasta que no consiga hacer funcionar el botón assist para hacer las copias de recuperación dejo el <br />
+Downgrade a Windows 7</p>
+<p>Los programas</p>
+<p>Y una vez lanzado el programa</p>
+<p><img alt="captura" src="img/uno.png" title="captura" /></p>
+<h1 id="cuando-se-desconfigura-el-teclado-en-ubuntu"><a name="user-content-cuando-se-desconfigura-el-teclado-en-ubuntu" href="#cuando-se-desconfigura-el-teclado-en-ubuntu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Cuando se desconfigura el teclado en ubuntu</h1>
+<p>cuando se desconfigura el teclado &hellip;<br />
+setxkbmap -layout es</p>
+<h1 id="uso-del-disco"><a name="user-content-uso-del-disco" href="#uso-del-disco" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Uso del disco</h1>
+<p>Hay un uso intensivo de acceso a disco .<br />
+Veo que es un programa llamado SkyDrive llega a tener el 100% lo quito.</p>
+<p>Verlo así con información del proceso.<br />
+<a href="https://softwareeducativo.wordpress.com/web-2-0/recursos-web-2-0/skydrive-que-es-para-que-sirve/">https://softwareeducativo.wordpress.com/web-2-0/recursos-web-2-0/skydrive-que-es-para-que-sirve/</a><br />
+<a href="http://es.wikipedia.org/wiki/OneDrive">http://es.wikipedia.org/wiki/OneDrive</a><br />
+ahora es OneDrive </p>
+<h1 id="amplificador-wifi"><a name="user-content-amplificador-wifi" href="#amplificador-wifi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Amplificador Wifi</h1>
+<p>Artículos comprados<br />
+1 unidad<br />
+29,50€<br />
+TOTAL</p>
+<h1 id="kernel_data_inpage_error"><a name="user-content-kernel_data_inpage_error" href="#kernel_data_inpage_error" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>KERNEL_DATA_INPAGE_ERROR</h1>
+<p><a href="http://www.reviversoft.com/es/blog/2013/05/kernel-data-inpage-error/">http://www.reviversoft.com/es/blog/2013/05/kernel-data-inpage-error/</a><br />
+al final hago el volcado de memoria y parece funcionar 29/07/2015</p>
+<p>02/11/2015 <br />
+vuelve a dar el mismo fallo<br />
+Boton derecho del ratón sobre &ldquo;equipo&rdquo;, escogemos propiedades, buscamos &ldquo;configuración avanzada del sistema&rdquo; y clicamos sobre él, en propiedades de sistema abajo en &ldquo;inicio y recuperación&rdquo; vamos a configuración y elegimos en volcado, la opción Volcado de memoria completa.</p>
+<p>Aceptamos reiniciamos y se acabaron los pantallazos.</p>
+<p>Pero no es asi 06/11/2015 <br />
+programo un chkdsk C: / f / r / x  al reinicio.</p>
+<p>22/11/2015 :<br />
+Desmonto el disco duro y lo pongo más sujet# <br />
+Creo que era eso dado que no se vuelve a repeti# Al estar suelto o un poco suelto no conectaba bien y daba el error al no encontrar S# Pasaba sobre todo al cojerlo de una esquina.</p>
+<h1 id="grub-rescue"><a name="user-content-grub-rescue" href="#grub-rescue" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>grub rescue</h1>
+<p>Ha salido un par de veces.<br />
+Al final sale al menu de arranque …<br />
+hacerle una foto pues no recuerdo cual era la opción par windows ni para ubuntu.<br />
+Si vuelve a salir hacerle foto.</p>
+<h1 id="problemas-con-el-sonido"><a name="user-content-problemas-con-el-sonido" href="#problemas-con-el-sonido" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>problemas con el sonido</h1>
+<p><a href="http://windows.microsoft.com/es-es/windows-10/fix-sound-problems#v1h=tab01">http://windows.microsoft.com/es-es/windows-10/fix-sound-problems#v1h=tab01</a><br />
+Abre Inicio, escribe Administrador de dispositivos, y selecciónalo de la lista. En Sonido, vídeo y controladores de juego, selecc. tarj. sonido, ábrela, selecc. Controlador y Actualizar controlador. Si Windows no encuentra un contr. nuevo, busca uno en el sitio web del fabr. del dispos. y sigue las instr.</p>
+<p>Si no funciona, desinst. el contr. audio: abre Administrador de dispositivos, haz clic con el botón der. (o mantén pulsado) el contr. audio, selecc. Desinstalar. Reinicia el disp. y Windows intentará reinst. el contr.</p>
+<p>Si no funciona, usa el contr. audio gen. incluido en Windows. Haz esto: en Administrador de dispositivos, haz clic con el botón der. en (o mantén pulsado) contr. audio &gt; Actualizar software de controlador&hellip; &gt; Examinar el equipo para buscar software de controlador &gt; Dejarme elegirlo de una lista de controladores de dispositivo de mi equipo, selecc. Dispositivo de audio de alta definición, Siguiente, y sigue instrucc. para instalarlo.</p>
+
+	<a href="#arriba" class="contents">arriba</a>
+	</div>
+	<footer class="container">
+		<p class="text-muted text-center">
+			notas para javier  
+		</p>
+	</footer>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready( function() {
+	$('table').addClass('table table-bordered');
+});
+</script>

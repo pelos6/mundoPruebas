@@ -1,0 +1,398 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+	<title>meteor</title>
+	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<div id="container" class="container">
+	<p class="contents"><a name="arriba" href="miMundo.html">Mi Mundo</a></p>
+		<p><a href="miMundo.html">mi mundo</a> / <a href="programacion.html">programacion</a> / meteor </p>
+<h1 id="meteor"><a name="user-content-meteor" href="#meteor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Meteor</h1>
+<!-- MarkdownTOC -->
+
+<ul>
+<li><a href="#proposito">Proposito</a></li>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#instalar">instalar</a></li>
+<li><a href="#instalar-meteor-de-nuevo">instalar meteor de nuevo</a></li>
+<li><a href="#crear-una-aplicacion-con-meteor">crear una aplicacion con meteor</a></li>
+<li><a href="#hosting-con-meteor">hosting con meteor</a></li>
+<li><a href="#hosting-en-heroku">hosting en heroku</a></li>
+<li><a href="#consolas">Consolas</a><ul>
+<li><a href="#consola-de-meteor">Consola de meteor.</a></li>
+<li><a href="#consola-del-server">consola del server</a></li>
+</ul>
+</li>
+<li><a href="#port">port</a></li>
+<li><a href="#usuarios">usuarios</a></li>
+<li><a href="#final">Final</a></li>
+<li><a href="#practicas-coursera">practicas coursera</a></li>
+<li><a href="#cursos-de-coursera">Cursos de Coursera</a><ul>
+<li><a href="#introducción-al-desarrollo-con-meterorjs">Introducción al Desarrollo con Meteror.js</a></li>
+</ul>
+</li>
+<li><a href="#web-application-development-with-javascript-and-mongodb">Web Application Development with JavaScript and MongoDB</a></li>
+<li><a href="#-responsive-website-tutorial-and-examples"> Responsive Website Tutorial and Examples</a></li>
+<li><a href="#blog">blog</a></li>
+<li><a href="#graficos-y-meteor">graficos y meteor</a><ul>
+<li><a href="#textcircle">Textcircle</a></li>
+<li><a href="#aplicacion-desde-cero">aplicacion desde cero</a></li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+
+<p>Instalo meteor.js un framework que parece interesante <br />
+<em> Sobre un curso de coursera <br />
+</em> Es necesario un servidor para lanzar el programa que lo lleva el propio meteor<br />
+* recursos<br />
+    - <a href="https://www.meteor.com/install">web de meteor instalación</a></p>
+<h1 id="proposito"><a name="user-content-proposito" href="#proposito" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Proposito</h1>
+<p>Trastear con meteor un framework cliente servidor con javascript.</p>
+<h1 id="inicio"><a name="user-content-inicio" href="#inicio" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Inicio</h1>
+<p>Instalo meteor.js un framework que parece interesante …<br />
+se instala en <br />
+C:\Users\Javier\AppData\Local.meteor\packages</p>
+<p>login en meteor<br />
+javieriranzo <br />
+pelos678<br />
+javieriranzomicroscope.meteor.com</p>
+<p>sigo este manual que parece bastante bueno y en castellano<br />
+<a href="http://es.discovermeteor.com/chapters/deploying/">http://es.discovermeteor.com/chapters/deploying/</a><br />
+y este curso en ingles.<br />
+<a href="https://www.coursera.org/learn/web-application-development/home/week/1">https://www.coursera.org/learn/web-application-development/home/week/1</a></p>
+<p>tutorial básico <br />
+<a href="https://www.meteor.com/tutorials/blaze">https://www.meteor.com/tutorials/blaze</a><br />
+el código … no veo como actualizar una tarea.<br />
+<a href="https://github.com/meteor/simple-todos">https://github.com/meteor/simple-todos</a></p>
+<h1 id="instalar"><a name="user-content-instalar" href="#instalar" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>instalar</h1>
+<p><a href="instalarMeteor.html">instalar meteor desde cero</a></p>
+<h1 id="instalar-meteor-de-nuevo"><a name="user-content-instalar-meteor-de-nuevo" href="#instalar-meteor-de-nuevo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>instalar meteor de nuevo</h1>
+<p>C:\nube\MEGA\cursos\coursera\minstantJavier&gt;meteor<br />
+&ldquo;&rdquo;C:\Users\Javier\AppData\Local.meteor\packages\meteor-tool\1.3.2_3\mt-os.windows.x86_32\meteor.bat&rdquo;&rdquo; no se reconoce como un comando interno o externo,<br />
+programa o archivo por lotes ejecutable.</p>
+<h1 id="crear-una-aplicacion-con-meteor"><a name="user-content-crear-una-aplicacion-con-meteor" href="#crear-una-aplicacion-con-meteor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>crear una aplicacion con meteor</h1>
+<p><pre><code>meteor create &lt;nombre aplicacion&gt;
+cd &lt;nombre aplicación&gt; 
+meteor
+</code></pre><br />
+Asi se crea y se lanza en el puerto localhost:3000<br />
+aplicación de ejemplo con <br />
+meteor create try-meteor en <br />
+C:\nube\MEGA\programacion\JavaScript\meteorJs\appInicio\tryMeteor&gt;</p>
+<p>en otra consola se puede ver la consola de mongodb con <br />
+meteor momgo<br />
+y alli para ver las bases de datos <br />
+<pre><code>show dbs
+</code></pre><br />
+para ver las collections<br />
+<pre><code>show collections 
+</code></pre></p>
+<h1 id="hosting-con-meteor"><a name="user-content-hosting-con-meteor" href="#hosting-con-meteor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>hosting con meteor</h1>
+<p>Al principio pongo la aplicación de ejemplo en meteor <br />
+<a href="http://javieriranzomicroscope.meteor.com/">http://javieriranzomicroscope.meteor.com/</a><br />
+pero dejan de ofrecer hosting gratuito y ofrecen estar alternativas</p>
+<p>If you’re only looking for free hosting, we recommend using a combination of free services from Heroku and MongoLa# Here are links to some community articles to help you get started:</p>
+<p>How to run a MeteorJS application on Heroku in 10 steps<br />
+Deploy to production on Heroku<br />
+You can also consult the Meteor Guide for other DIY deployment options.</p>
+<p>Que parecen interesantes</p>
+<h1 id="hosting-en-heroku"><a name="user-content-hosting-en-heroku" href="#hosting-en-heroku" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>hosting en heroku</h1>
+<p>Uno de los ejemplos que ofrecen los chicos de meteor es un blog mediun que esta muy de moda.<br />
+<a href="https://medium.com/@leonardykris/how-to-run-a-meteor-js-application-on-heroku-in-10-steps-7aceb12de234?mkt_tok=3RkMMJWWfF9wsRonu6rNZKXonjHpfsX56OsvXKe2lMI%2F0ER3fOvrPUfGjI4ATMBnI%2BSLDwEYGJlv6SgFTLLCMbJ20LgEXxA%3D#.k1f31n2hd">https://medium.com/@leonardykris/how-to-run-a-meteor-js-application-on-heroku-in-10-steps-7aceb12de234?mkt_tok=3RkMMJWWfF9wsRonu6rNZKXonjHpfsX56OsvXKe2lMI%2F0ER3fOvrPUfGjI4ATMBnI%2BSLDwEYGJlv6SgFTLLCMbJ20LgEXxA%3D#.k1f31n2hd</a></p>
+<p>en c:/var/www<br />
+meteor create foobar<br />
+cd foobar<br />
+<a href="http://localhost:3000">http://localhost:3000</a></p>
+<p>git init<br />
+git add .<br />
+git commit -m &ldquo;My first commit!</p>
+<p>heroku login<br />
+heroku git:remote -a portfoliojavier<br />
+git push heroku master</p>
+<p><a href="mailto:javieriranzo@hotmail.com">javieriranzo@hotmail.com</a><br />
+pelos678<br />
+heroku apps:create foobar</p>
+<p>heroku buildpacks:set <a href="https://github.com/jordansissel/heroku-buildpack-meteor.git">https://github.com/jordansissel/heroku-buildpack-meteor.git</a></p>
+<p>heroku addons:create mongolab:sandbox<br />
+tengo que meter la tarjeta de crédito de ing <br />
+heroku config </p>
+<p>=== foobarjavier Config Vars<br />
+MONGOLAB_URI: mongodb://heroku_xcx1nx9h:bqc38q5m814p4a8n695glnrn78@ds021989.mlab.com:21989/heroku_xcx1nx9h</p>
+<p>heroku config:add MONGO_URL=mongodb://heroku_xcx1nx9h:bqc38q5m814p4a8n695glnrn78@ds021989.mlab.com:21989/heroku_xcx1nx9h<br />
+heroku config:add ROOT_URL=<a href="https://foobarjavier.herokuapp.com">https://foobarjavier.herokuapp.com</a></p>
+<p>c:\var\www\foobar&gt;git remote -v<br />
+heroku  <a href="https://git.heroku.com/foobarjavier.git">https://git.heroku.com/foobarjavier.git</a> (fetch)<br />
+heroku  <a href="https://git.heroku.com/foobarjavier.git">https://git.heroku.com/foobarjavier.git</a> (push)</p>
+<p>c:\var\www\foobar&gt;git push heroku master<br />
+Counting objects: 13, done.<br />
+Delta compression using up to 2 threads.<br />
+Compressing objects: 100% (9/9), done.<br />
+Writing objects: 100% (13/13), 2.51 KiB | 0 bytes/s, done.<br />
+Total 13 (delta 0), reused 0 (delta 0)<br />
+remote: Compressing source files.# done.<br />
+remote: Building source:<br />
+remote:<br />
+remote: -----&gt; Fetching set buildpack <a href="https://github.com/jordansissel/heroku-buildpack-meteor.git.#">https://github.com/jordansissel/heroku-buildpack-meteor.git.#</a> done<br />
+remote: -----&gt; meteor app detected<br />
+remote:<br />
+remote: -----&gt; Moving app source into a subdirectory<br />
+remote:<br />
+remote:        Node engine:         0.10.40<br />
+remote:        Npm engine:          unspecified<br />
+remote:        Start mechanism:     none<br />
+remote:        node_modules source: none<br />
+remote:        node_modules cached: false<br />
+remote:<br />
+remote:        NPM_CONFIG_PRODUCTION=true<br />
+remote:        NODE_MODULES_CACHE=true<br />
+remote:<br />
+remote:        PRO TIP: Use &lsquo;npm init&rsquo; and &lsquo;npm install &ndash;save&rsquo; to define dependencies<br />
+remote:        See <a href="https://devcenter.heroku.com/articles/nodejs-support">https://devcenter.heroku.com/articles/nodejs-support</a><br />
+remote:<br />
+remote:        PRO TIP: Include a Procfile, package.json start script, or server.js file to start your app<br />
+remote:        See <a href="https://devcenter.heroku.com/articles/nodejs-support#runtime-behavior">https://devcenter.heroku.com/articles/nodejs-support#runtime-behavior</a><br />
+remote:<br />
+remote: -----&gt; Installing binaries<br />
+remote:        Downloading and installing node 0.10.40&hellip;<br />
+remote:<br />
+remote: -----&gt; Building dependencies<br />
+remote:        Skipping dependencies (no source for node_modules)<br />
+remote:<br />
+remote: -----&gt; Checking startup method<br />
+remote:<br />
+remote: -----&gt; Finalizing build<br />
+remote:        Creating runtime environment<br />
+remote:        Exporting binary paths<br />
+remote:        Cleaning up build artifacts<br />
+remote:        Build successful!<br />
+remote:        /tmp/build_8aeb225247e3504e6d0cc8952903bb76<br />
+remote:        └── (empty)<br />
+remote:<br />
+remote:<br />
+remote: -----&gt; Fetching Meteor 1.2.1<br />
+remote:   % Total    % Received % Xferd  Average Speed   Time    Time     Time<br />
+Current<br />
+remote:                                  Dload  Upload   Total   Spent    Left<br />
+Speed<br />
+remote:   0     0    0     0    0     0      0      0 &ndash;:&ndash;:&ndash; &ndash;:&ndash;:&ndash; &ndash;:&ndash;:&ndash;remote:  21  147M   21 31.7M    0     0  41.5M      0  0:00:03 &ndash;:&ndash;:&ndash;  0:00:03remote:  51  147M   51 75.5M    0     0  42.8M      0  0:00:03  0:00:01  0:00:02remote:  81  147M   81  120M    0     0  43.5M      0  0:00:03  0:00:02  0:00:01remote: 100  147M  100  147M    0     0  44.0M      0  0:00:03  0:00:03 &ndash;:&ndash;:&ndash; 44.0M<br />
+remote:<br />
+remote: -----&gt; Unpacking Meteor 1.2.1<br />
+remote:        Meteor 1.2.1 is installed<br />
+remote:<br />
+remote: -----&gt; Building Meteor App Bundle<br />
+remote:<br />
+remote: -----&gt; Installing App&rsquo;s NPM Dependencies<br />
+remote:        npm WARN package.json meteor-dev-bundle@0.0.0 No description<br />
+remote:        npm WARN package.json meteor-dev-bundle@0.0.0 No repository field.<br />
+remote:        npm WARN package.json meteor-dev-bundle@0.0.0 No README data<br />
+remote:<br />
+remote:        &gt; fibers@1.0.5 install /tmp/build_8aeb225247e3504e6d0cc8952903bb76/build/bundle/programs/server/node_modules/fibers<br />
+remote:        &gt; node ./build.js<br />
+remote:<br />
+remote:        <code>linux-x64-v8-3.14</code> exists; testing<br />
+remote:        Binary is fine; exiting<br />
+remote:        ansi-regex@0.2.1 node_modules/ansi-regex<br />
+remote:<br />
+remote:        ansi-styles@1.1.0 node_modules/ansi-styles<br />
+remote:<br />
+remote:        escape-string-regexp@1.0.3 node_modules/escape-string-regexp<br />
+remote:<br />
+remote:        chalk@0.5.1 node_modules/chalk<br />
+remote:<br />
+remote:        strip-ansi@0.3.0 node_modules/strip-ansi<br />
+remote:<br />
+remote:        supports-color@0.2.0 node_modules/supports-color<br />
+remote:<br />
+remote:        has-ansi@0.1.0 node_modules/has-ansi<br />
+remote:<br />
+remote:        eachline@2.3.3 node_modules/eachline<br />
+remote:<br />
+remote:        type-of@2.0.1 node_modules/type-of<br />
+remote:<br />
+remote:        amdefine@1.0.0 node_modules/amdefine<br />
+remote:<br />
+remote:        asap@2.0.3 node_modules/asap<br />
+remote:<br />
+remote:        underscore@1.5.2 node_modules/underscore<br />
+remote:<br />
+remote:        meteor-promise@0.5.0 node_modules/meteor-promise<br />
+remote:<br />
+remote:        promise@7.0.4 node_modules/promise<br />
+remote:<br />
+remote:        source-map-support@0.3.2 node_modules/source-map-support<br />
+remote:<br />
+remote:        semver@4.1.0 node_modules/semver<br />
+remote:<br />
+remote:        source-map@0.1.32 node_modules/source-map<br />
+remote:<br />
+remote:        fibers@1.0.5 node_modules/fibers<br />
+remote:<br />
+remote: -----&gt; Discovering process types<br />
+remote:        Procfile declares types     -&gt; (none)<br />
+remote:        Default types for buildpack -&gt; web<br />
+remote:<br />
+remote: -----&gt; Compressing&hellip;<br />
+remote:        Done: 161.7M<br />
+remote: -----&gt; Launching&hellip;<br />
+remote:        Released v6<br />
+remote:        <a href="https://foobarjavier.herokuapp.com/">https://foobarjavier.herokuapp.com/</a> deployed to Heroku<br />
+remote:<br />
+remote: Verifying deploy.# done.<br />
+To <a href="https://git.heroku.com/foobarjavier.git">https://git.heroku.com/foobarjavier.git</a><br />
+ * [new branch]      master -&gt; master</p>
+<p>le cuesta un rato pero al final se puede ver la aplicación en esta url .<br />
+Antes salia un mensaje de bienvenida con una documentación de como desplegar </p>
+<p><a href="https://foobarjavier.herokuapp.com/">https://foobarjavier.herokuapp.com/</a></p>
+<p>c:\var\www\foobar&gt;heroku addons:create papertrail:choklad<br />
+Creating papertrail-slippery-43962.# done, (free)<br />
+Adding papertrail-slippery-43962 to foobarjavier.# done<br />
+Setting PAPERTRAIL_API_TOKEN and restarting foobarjavier.# done, v7<br />
+Welcome to Papertrai# Questions and ideas are welcome (<a href="mailto:support@papertrailapp.com">support@papertrailapp.com</a># Happy logging!<br />
+Use <code>heroku addons:docs papertrail</code> to view documentation.</p>
+<p>Para ver los logs</p>
+<h1 id="consolas"><a name="user-content-consolas" href="#consolas" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Consolas</h1>
+<h2 id="consola-de-meteor"><a name="user-content-consola-de-meteor" href="#consola-de-meteor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Consola de meteor.</h2>
+<p>Cd C:var/www/foobar/<br />
+meteor     &mdash; para arrancar el servidor que se ve en <a href="http://localhost:3000">http://localhost:3000</a></p>
+<p>meteor search <nombre paquete> &mdash;para buscar paquetes disponibles <br />
+meteor list &mdash; muestra los paquetes instalados</p>
+<h2 id="consola-del-server"><a name="user-content-consola-del-server" href="#consola-del-server" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>consola del server</h2>
+<p>meteor shell</p>
+<p>en la consola del server salen por este orden los mensajes de<br />
+lib<br />
+shared<br />
+server<br />
+y en la del navegador la de<br />
+lib<br />
+shared<br />
+client</p>
+<h1 id="port"><a name="user-content-port" href="#port" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>port</h1>
+<p>Meteor <br />
+<pre><code>-- port 3030
+</code></pre><br />
+para lanzarlo en otro puerto y poder correr dos aplicaciones </p>
+<h1 id="usuarios"><a name="user-content-usuarios" href="#usuarios" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>usuarios</h1>
+<p><a href="mailto:javieriranzo@hotmail.com">javieriranzo@hotmail.com</a><br />
+pelos678</p>
+<p><a href="mailto:pilarvelasanz@hotmail.com">pilarvelasanz@hotmail.com</a><br />
+pilarvela </p>
+<p><a href="mailto:mariairanzo@hotmail.com">mariairanzo@hotmail.com</a><br />
+maria6 </p>
+<h1 id="final"><a name="user-content-final" href="#final" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Final</h1>
+<p>Dejo el ejemplo bajado de github<br />
+c:\var\www\github_microscope<br />
+meteor<br />
+<a href="http://localhost:3000/">http://localhost:3000/</a></p>
+<p>lo copio en foobar que es el que esta sincronizado con heroku<br />
+desplegado en heroku<br />
+<a href="https://foobarjavier.herokuapp.com">https://foobarjavier.herokuapp.com</a><br />
+panel en <br />
+<a href="https://dashboard.heroku.com/apps/foobarjavier/activity">https://dashboard.heroku.com/apps/foobarjavier/activity</a></p>
+<h1 id="practicas-coursera"><a name="user-content-practicas-coursera" href="#practicas-coursera" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>practicas coursera</h1>
+<p><a href="https://github.com/templetonpr">https://github.com/templetonpr</a><br />
+parece la tarea final .</p>
+<h1 id="cursos-de-coursera"><a name="user-content-cursos-de-coursera" href="#cursos-de-coursera" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Cursos de Coursera</h1>
+<h2 id="introduccion-al-desarrollo-con-meterorjs"><a name="user-content-introduccion-al-desarrollo-con-meterorjs" href="#introduccion-al-desarrollo-con-meterorjs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Introducción al Desarrollo con Meteror.js</h2>
+<p>Buen ejemplo con imagenes.<br />
+Validación de usuarios</p>
+<h1 id="web-application-development-with-javascript-and-mongodb"><a name="user-content-web-application-development-with-javascript-and-mongodb" href="#web-application-development-with-javascript-and-mongodb" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Web Application Development with JavaScript and MongoDB</h1>
+<h1 id="responsive-website-tutorial-and-examples"><a name="user-content-responsive-website-tutorial-and-examples" href="#responsive-website-tutorial-and-examples" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Responsive Website Tutorial and Examples</h1>
+<p>Con meteor es la 5 parte de un curso de web responsiva<br />
+15.# Despliegue en heroku</p>
+<p>meteor create foobar<br />
+cd foobar</p>
+<p>.- ya he creado antes la aplicación que portfoliojavier con algún problema sobre permisos ….</p>
+<p>git init<br />
+git add .<br />
+git commit -m &ldquo;My first commit!</p>
+<p>heroku login<br />
+heroku apps:create portfoliojavier</p>
+<p>Creating portfoliojavier.# done<br />
+<a href="https://portfoliojavier.herokuapp.com/">https://portfoliojavier.herokuapp.com/</a> | <a href="https://git.heroku.com/portfoliojavier.git">https://git.heroku.com/portfoliojavier.git</a></p>
+<p>heroku buildpacks:set <a href="https://github.com/jordansissel/heroku-buildpack-meteor.git">https://github.com/jordansissel/heroku-buildpack-meteor.git</a></p>
+<p>git push heroku master<br />
+&mdash; pero da un problema ….<br />
+heroku addons:create mongolab:sandbox<br />
+&mdash; antes había creado otro mongolab en heroku directamente.<br />
+Heroku config <br />
+=== portfoliojavier Config Vars<br />
+MONGODB_URI:        mongodb://heroku_q96503hh:p570u99a07q9k1rse59heov6f6@ds021761.mlab.com:21761/heroku_q96503hh<br />
+MONGOLAB_BROWN_URI: mongodb://heroku_shz4125m:d7huktiopq29fvs2fgdfr3q73n@ds015929.mlab.com:15929/heroku_shz4125m<br />
+tengo que meter la tarjeta de crédito de ing <br />
+heroku config </p>
+<p>=== foobarjavier Config Vars<br />
+MONGOLAB_URI: mongodb://heroku_xcx1nx9h:bqc38q5m814p4a8n695glnrn78@ds021989.mlab.com:21989/heroku_xcx1nx9h</p>
+<p>heroku config:add MONGO_URL=mongodb://heroku_xcx1nx9h:bqc38q5m814p4a8n695glnrn78@ds021989.mlab.com:21989/heroku_xcx1nx9h<br />
+heroku config:add ROOT_URL=<a href="https://portfoliojavier.herokuapp.com">https://portfoliojavier.herokuapp.com</a></p>
+<blockquote>
+<p>git remote -v<br />
+heroku  <a href="https://git.heroku.com/portfoliojavier.git">https://git.heroku.com/portfoliojavier.git</a> (fetch)<br />
+heroku  <a href="https://git.heroku.com/portfoliojavier.git">https://git.heroku.com/portfoliojavier.git</a> (push)</p>
+</blockquote>
+<p>la aplicación deja de dar error<br />
+creo el primer usuario (que por defecto es el administrador )  <a href="mailto:javieriranzo@hotmail.com">javieriranzo@hotmail.com</a> pelos678</p>
+<p>15.# practica obligatoria meteor-portfolio-website Compañeros<br />
+El de panama<br />
+<a href="https://github.com/FoxPowerGH/Meteor-Portfolio-Website.git">https://github.com/FoxPowerGH/Meteor-Portfolio-Website.git</a></p>
+<p>el del futbolista<br />
+<a href="https://github.com/lazygalaxy/portfolio-meteorjs-example.git">https://github.com/lazygalaxy/portfolio-meteorjs-example.git</a></p>
+<p>el mio <br />
+portafolio_website_example</p>
+<p>stanislaw <br />
+un fotografo buen trabajo.</p>
+<p>Tim blog<br />
+noticias de canada con facebook y disqus … muy bueno <br />
+jane<br />
+sobre una danzarina … muy bueno tambien.<br />
+15.# de compañeros<br />
+package.json si existe en el directorio<br />
+npm install  y se crea node_modules ….</p>
+<p>15.# Entrega segunda mia<br />
+Primero clono lo que tengo en heroku .</p>
+<p>C:\nube\MEGA\cursos\coursera\CursowebResponsivaEjemplos\deHeroku<br />
+heroku git:clone -a portfoliojavier<br />
+$ cd portfoliojavier<br />
+no quito nada del directorio local pues esta la base de datos con los posts</p>
+<p>solo consigo 7 de 8 así que tengo que mejorar<br />
+.- mas fotos<br />
+.- que sea responsivo el menú.</p>
+<h1 id="blog"><a name="user-content-blog" href="#blog" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>blog</h1>
+<p>Ejemplo de blog ryw:blog que es la extensión que se usa en ese curso para esa semana.<br />
+<a href="https://github.com/meteor-blog/example-blog-app.git">https://github.com/meteor-blog/example-blog-app.git</a><br />
+C:\nube\MEGA\cursos\coursera\CursowebResposivaEjemplos\blogejemplo\<br />
+<a href="mailto:javier@hotmail.com">javier@hotmail.com</a><br />
+javier <br />
+tiene facebook twiter y disqus</p>
+<h1 id="graficos-y-meteor"><a name="user-content-graficos-y-meteor" href="#graficos-y-meteor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>graficos y meteor</h1>
+<p><a href="http://www.highcharts.com/blog/195-meteor-standalone">http://www.highcharts.com/blog/195-meteor-standalone</a></p>
+<p>clono <br />
+<a href="https://github.com/khriztianmoreno/meteor-charts.git">https://github.com/khriztianmoreno/meteor-charts.git</a><br />
+que en un comentario dice que tiene un ejemplo.....<br />
+a ver si no da problemas de permiso de lectura con mongodb .<br />
+No da esos problema# (eran por la ñ del directorios compañeros !!!!!)</p>
+<h2 id="textcircle"><a name="user-content-textcircle" href="#textcircle" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Textcircle</h2>
+<p>Funciona y esta bien …..</p>
+<p><a href="mailto:javieriranzo@hotmail.com">javieriranzo@hotmail.com</a><br />
+javier </p>
+<h2 id="aplicacion-desde-cero"><a name="user-content-aplicacion-desde-cero" href="#aplicacion-desde-cero" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>aplicacion desde cero</h2>
+<p><a href="appInicio.html">notas sobre una aplicación propia desde el inicio</a> </p>
+
+	<a href="#arriba" class="contents">arriba</a>
+	</div>
+	<footer class="container">
+		<p class="text-muted text-center">
+			notas para javier  
+		</p>
+	</footer>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready( function() {
+	$('table').addClass('table table-bordered');
+});
+</script>

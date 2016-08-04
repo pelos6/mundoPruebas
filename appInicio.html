@@ -1,0 +1,74 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+	<title>appInicio</title>
+	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<div id="container" class="container">
+	<p class="contents"><a name="arriba" href="miMundo.html">Mi Mundo</a></p>
+		<p><a href="miMundo.html">mi mundo</a> / <a href="programacion.html">programacion</a> / <a href="meteor.html">meteor</a> / appInicio </p>
+<h1 id="app-inicio"><a name="user-content-app-inicio" href="#app-inicio" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>app Inicio</h1>
+<!-- MarkdownTOC -->
+
+<ul>
+<li><a href="#proposito">Proposito</a></li>
+<li><a href="#crear-una-aplicacion-con-meteor">crear una aplicacion con meteor</a></li>
+<li><a href="#cuentas-de-usuario">cuentas de usuario</a></li>
+<li><a href="#bootstrap">bootstrap</a></li>
+<li><a href="#mongodb">mongodb</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+
+<h1 id="proposito"><a name="user-content-proposito" href="#proposito" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Proposito</h1>
+<p>Se crear una apliación sencilla propia desde el inicio usando lo que voy aprendiendo</p>
+<h1 id="crear-una-aplicacion-con-meteor"><a name="user-content-crear-una-aplicacion-con-meteor" href="#crear-una-aplicacion-con-meteor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>crear una aplicacion con meteor</h1>
+<p><pre><code>meteor create tryMeteor
+cd tryMeteor 
+meteor
+</code></pre><br />
+Asi se crea y se lanza en el puerto localhost:3000<br />
+C:\nube\MEGA\programacion\JavaScript\meteorJs\appInicio\tryMeteor&gt;<br />
+el puerto se puede cambiar con <br />
+<pre><code>meteor --port 3030
+</code></pre></p>
+<p>Quito el html del ejemplo que es un simple contador de click y pongo la barra de menu y el login.</p>
+<h1 id="cuentas-de-usuario"><a name="user-content-cuentas-de-usuario" href="#cuentas-de-usuario" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>cuentas de usuario</h1>
+<p>para la autenticación con usuario se añade <br />
+´´´<br />
+meteor add accounts-ui accounts-password<br />
+´´´ <br />
+los paquetes nuevos se añaden en <br />
+C:\nube\MEGA\programacion\JavaScript\meteorJs\appInicio\tryMeteor.meteor\packages<br />
+Solo con esto ya tenemos implementado el login.<br />
+Incluido el  reenvio de contraseña al correo que se ha indicado.<br />
+En local ese correo se muestra por la consola del programa indicando el enlace que se usa para resetear la contraseña.<br />
+<a href="https://www.meteor.com/tutorials/blaze/adding-user-accounts">más información</a></p>
+<h1 id="bootstrap"><a name="user-content-bootstrap" href="#bootstrap" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>bootstrap</h1>
+<p>para usar bootstrap se tiene que añadir el paquete <br />
+<pre><code>meteor add twbs:bootstrap
+</code></pre><br />
+Se usa el repositorio de <a href="https://atmospherejs.com/twbs/bootstrap">meteor Atmosfere</a></p>
+<h1 id="mongodb"><a name="user-content-mongodb" href="#mongodb" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>mongodb</h1>
+<p>para resetear la base de datos<br />
+´´´<br />
+mongo reset <br />
+´´´</p>
+
+	<a href="#arriba" class="contents">arriba</a>
+	</div>
+	<footer class="container">
+		<p class="text-muted text-center">
+			notas para javier  
+		</p>
+	</footer>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready( function() {
+	$('table').addClass('table table-bordered');
+});
+</script>

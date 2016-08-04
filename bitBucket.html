@@ -1,0 +1,68 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+	<title>bitBucket</title>
+	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<div id="container" class="container">
+	<p class="contents"><a name="arriba" href="miMundo.html">Mi Mundo</a></p>
+		<h1 id="bitbucket"><a name="user-content-bitbucket" href="#bitbucket" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>BitBucket</h1>
+<p>uso <a href="https://bitbucket.org/pelos6">bitBucket</a> porque me permite tener repositorios privados.<br />
+Necesito tener <a href="git.html">git</a> instalado.</p>
+<h2 id="primero-creo-el-repositorio-en-la-web-de-nombre-mundo"><a name="user-content-primero-creo-el-repositorio-en-la-web-de-nombre-mundo" href="#primero-creo-el-repositorio-en-la-web-de-nombre-mundo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>primero creo el repositorio en la web de nombre mundo.</h2>
+<p><a href="https://bitbucket.org/pelos6/mundo">repositorio mundo</a></p>
+<h2 id="luego-en-el-ordenador-donde-comienzo"><a name="user-content-luego-en-el-ordenador-donde-comienzo" href="#luego-en-el-ordenador-donde-comienzo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>luego en el ordenador donde comienzo</h2>
+<pre><code>cd C:\nube\MEGA\mundo
+git init
+git remote add origin https://pelos6@bitbucket.org/pelos6/mundo.git
+</code></pre>
+
+<h2 id="luego-subo-el-contenido-del-directorio"><a name="user-content-luego-subo-el-contenido-del-directorio" href="#luego-subo-el-contenido-del-directorio" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>luego subo el contenido del directorio</h2>
+<pre><code>git add -A
+git commit -m &quot;primer commit&quot;
+git push -u origin master
+</code></pre>
+
+<p>problemas con la cache .. se dieron al cambiar el nombre de los archivos<br />
+<pre><code>git rm -r --cached .
+git add .
+git commit -am &quot;cache limpia&quot;
+git push
+</code></pre></p>
+<p>para recuperar los cambios en otro directorio de trabajo<br />
+<pre><code>git pull
+</code></pre></p>
+<h2 id="para-usarlo-en-el-ordenador-nuevo"><a name="user-content-para-usarlo-en-el-ordenador-nuevo" href="#para-usarlo-en-el-ordenador-nuevo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Para usarlo en el ordenador nuevo</h2>
+<p>cd c:/nube/mega<br />
+git clone https://pelos6@bitbucket.org/pelos6/mundo.git</p>
+<h2 id="sublime-y-git-bitbucket"><a name="user-content-sublime-y-git-bitbucket" href="#sublime-y-git-bitbucket" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sublime y Git BitBucket</h2>
+<h3 id="sublimegit"><a name="user-content-sublimegit" href="#sublimegit" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SublimeGit</h3>
+<p><a href="http://www.azulweb.net/integra-git-en-sublime-text-3/">http://www.azulweb.net/integra-git-en-sublime-text-3/</a><br />
+con ctrl + mayus + p se pueden ver los comando de Git:status <br />
+que sale información muy interesante.<br />
+pero no consigo que funcione bien con el repositorio de bitBucket <br />
+Lo dejo instalado <br />
+<a href="SublimeGitPackageControlMessages.md">Instrucciones del package control</a><br />
+el push lo hago a mano mientras investigo como solucionarlo.</p>
+<h3 id="sublime-github"><a name="user-content-sublime-github" href="#sublime-github" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>sublime-github</h3>
+<h3 id="gitlink"><a name="user-content-gitlink" href="#gitlink" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>GitLink</h3>
+<p>Te dice que enlace tiene tu archivo incluso a nivel de linea y te puede llevar a esa URL</p>
+
+	<a href="#arriba" class="contents">arriba</a>
+	</div>
+	<footer class="container">
+		<p class="text-muted text-center">
+			notas para javier  
+		</p>
+	</footer>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready( function() {
+	$('table').addClass('table table-bordered');
+});
+</script>

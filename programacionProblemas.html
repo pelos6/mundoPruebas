@@ -1,0 +1,63 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+	<title>programacionProblemas</title>
+	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<div id="container" class="container">
+	<p class="contents"><a name="arriba" href="miMundo.html">Mi Mundo</a></p>
+		<p><a href="inicio.html">inicio</a> / <a href="miMundo.html">mi mundo</a> / <a href="programacion.html">programacion</a> / programacion Problemas </p>
+<h1 id="programacion-problemas"><a name="user-content-programacion-problemas" href="#programacion-problemas" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Programación Problemas</h1>
+<!-- MarkdownTOC -->
+
+<ul>
+<li><a href="#proposito">Proposito</a></li>
+<li><a href="#-bower"> Bower</a></li>
+<li><a href="#sublime-3">Sublime 3</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+
+<h1 id="proposito"><a name="user-content-proposito" href="#proposito" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Proposito</h1>
+<ul>
+<li>Los problemas que voy encontrando y (a veces) resolviendo.</li>
+</ul>
+<h1 id="bower"><a name="user-content-bower" href="#bower" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Bower</h1>
+<p>bower install me da este error<br />
+<pre><code>bower install
+&quot;appbower&quot; no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+</code></pre><br />
+asi que instalo bower otra vez<br />
+<pre><code>npm install -g bower
+</code></pre><br />
+da ahora este error<br />
+<pre><code>bower invalid-meta  The &quot;name&quot; is recommended to be lowercase, can contain digits, dots, dashes
+</code></pre><br />
+reviso bower.json y name es correcto !!!!<br />
+<pre><code>bower install --verbose -- force
+</code></pre><br />
+ahora funciona </p>
+<h1 id="sublime-3"><a name="user-content-sublime-3" href="#sublime-3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sublime 3</h1>
+<p>Error loading syntax file<br />
+&ldquo;Package/Markdown/Markdown.tmLanguage&rdquo;: Unable to open Package/Markdown/Markdown.tmLanguage <br />
+Esto pasaba si había un archivo md abierto por defecto lo que provocaba e intento de cargar la sintaxis para este tipo de archivo que estaba sustituida por el plugin markdownEditing<br />
+<a href="https://github.com/SublimeText-Markdown/MarkdownEditing/issues/205">https://github.com/SublimeText-Markdown/MarkdownEditing/issues/205</a></p>
+
+	<a href="#arriba" class="contents">arriba</a>
+	</div>
+	<footer class="container">
+		<p class="text-muted text-center">
+			notas para javier  
+		</p>
+	</footer>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready( function() {
+	$('table').addClass('table table-bordered');
+});
+</script>

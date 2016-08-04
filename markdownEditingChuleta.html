@@ -1,0 +1,270 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+	<title>markdownEditingChuleta</title>
+	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<style type="text/css">
+		body {
+			background-color: #EEE;
+			margin: 2em 0;
+			font-size: 12pt;
+			font-family: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans GB", sans-serif;
+			line-height: 150%;
+		}
+		blockquote {
+			font-size: inherit;
+		}
+		#container {
+			background-color: #FFF;
+			/*box-shadow: 0px 0px 10px #CCC;*/
+			/*border: 3px solid #DDD;*/
+			padding: 1em 2em;
+			box-shadow: 0 0 0.5em #e6e6e6 inset,0 0 0 1px #d3d3d3;
+			border-radius: 0.5em;
+			margin-bottom: 1em;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			border-bottom: 1px solid #EEE;
+			padding-bottom: 0.25em;
+			font-weight: bold;
+			margin-top: 1em;
+		}
+		img {
+			border: 3px solid #e6e6e6;
+			padding: 1em;
+			box-shadow: 0px 0px 10px #d3d3d3;
+		}
+		.contents
+		{
+   			 float: right
+		}
+		@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+			img { zoom: 0.5; }
+		}
+	</style>
+</head>
+<body>
+	<div id="container" class="container">
+	<p class="contents"><a name="arriba" href="miMundo.html">Mi Mundo</a></p>
+		<h1 id="markdownediting"><a name="user-content-markdownediting" href="#markdownediting" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MarkdownEditing</h1>
+<p>deshabilito el paquete previo de sublime según instrucciones.<br />
+<pre><code>&quot;ignored_packages&quot;: [..., &quot;Markdown&quot;],
+</code></pre></p>
+<p>Markdown plugin for Sublime Text. Provides a decent Markdown color scheme (light and dark) with more <strong>robust</strong> syntax highlighting and useful Markdown editing features for Sublime Text. 3 flavors are supported: Standard Markdown, <strong>GitHub flavored Markdown</strong>, MultiMarkdown.</p>
+<p><img alt="MarkdownEditing" src="https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/light.png" /></p>
+<p><a href="https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/dark.png">Dark</a> and <a href="https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/yellow.png">yellow</a> theme available (<a href="#additional-color-themes">additional</a>).</p>
+<h2 id="overview"><a name="user-content-overview" href="#overview" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Overview</h2>
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#key-bindings">Key Bindings</a></li>
+<li><a href="#gfm-specific-features">GFM Specific Features</a></li>
+<li><a href="#commands-for-command-palette">Commands for Command Palette</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#tips">Tips</a></li>
+<li><a href="#similar-plugins">Similar Plugins</a></li>
+<li><a href="#known-bugs">Known Bugs</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#credits">Credits</a></li>
+<li><a href="#donation">Donation</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id="features"><a name="user-content-features" href="#features" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Features</h2>
+<ul>
+<li>Asterisks and underscores are autopaired and will wrap selected text<ul>
+<li>If you start an empty pair and hit backspace, both elements are deleted</li>
+<li>If you start an empty pair and hit space, the right element is deleted</li>
+</ul>
+</li>
+<li>Backticks are paired</li>
+<li>At the end of a list item, pressing <kbd>Enter</kbd> will automatically insert the new list item bullet.<ul>
+<li>Pressing <kbd>Tab</kbd> on the blank list item will indent it and switch the list bullet to another one (Order is <code>*</code>, <code>-</code>, <code>+</code> in a cycle).</li>
+<li>Pressing <kbd>Shift</kbd> <kbd>Tab</kbd> on the blank list item will unindent it in the same way as above.</li>
+<li>Sequential <kbd>Tab</kbd> s or <kbd>Shift</kbd> <kbd>Tab</kbd> s are supported.</li>
+<li>You can disable automatic bullet switching or choose which bullets to be used, in your settings file.</li>
+<li>If a list item contains a <a href="https://help.github.com/articles/github-flavored-markdown">GFM task</a>, pressing <kbd>Enter</kbd> at the end of the line will continue with a new blank task.</li>
+</ul>
+</li>
+<li>At the end of a blockquote line, pressing <kbd>Enter</kbd> will automatically extend blockquote.</li>
+<li>Selecting some text and pressing <kbd>&gt;</kbd> will convert it to blockquote. The first and the last line don&rsquo;t have to be fully selected; partial select works, too.</li>
+<li>Left bracket pairing is modified to eliminate the selection and leave the cursor at a point where you can insert a <code>[]</code> or <code>()</code> pair for a link</li>
+<li>Displays Markdown headers in the Project Symbol List (<kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>R</kbd>). They will start with <code>#</code>, so you will know they belong to markdown files at a glance. Also they will be on top of the list because of the presedence of <code>#</code>.</li>
+<li><kbd>~</kbd> wraps selected text with <code>~~</code> (strikethrough).</li>
+<li>Typing <code>#</code> when there&rsquo;s a selection will surround it with <code>#</code> to make it a headline. Multiple presses add additional hashes, increasing the level of the header. Once you hit 6 hashes, it will reset to 0 on the next press. The <code>mde.match_header_hashes</code> will determine if the <code>#</code> are mirrored on both sides or just at the beginning of the line.</li>
+<li>Typing return at the end of a line that begins with hashmarks will insert closing hashmarks on the headline. They&rsquo;re not required for Markdown, it&rsquo;s just aesthetics, and you can change the <code>mde.match_header_hashes</code> option in your settings to disable.</li>
+<li>Setext-style headers can be completed with <code>Tab</code>. That is, typing <code>Tab</code> on a line containing only <code>=</code> or <code>-</code> characters will add or remove enough characters to it to match the length of the line above.</li>
+<li>New documents will be named automatically based on the first header.</li>
+</ul>
+<h2 id="key-bindings"><a name="user-content-key-bindings" href="#key-bindings" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Key Bindings</h2>
+<table>
+<thead>
+<tr>
+<th>OS X</th>
+<th>Windows/Linux</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>V</kbd></td>
+<td><kbd>Ctrl</kbd><kbd>Win</kbd><kbd>V</kbd></td>
+<td>Creates or pastes the contents of the clipboard as an inline link on selected text.</td>
+</tr>
+<tr>
+<td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>R</kbd></td>
+<td><kbd>Ctrl</kbd><kbd>Win</kbd><kbd>R</kbd></td>
+<td>Creates or pastes the contents of the clipboard as a reference link.</td>
+</tr>
+<tr>
+<td><kbd>⌘</kbd><kbd>⇧</kbd><kbd>K</kbd></td>
+<td><kbd>Shift</kbd><kbd>Win</kbd><kbd>K</kbd></td>
+<td>Creates or pastes the contents of the clipboard as an inline image on selected text.</td>
+</tr>
+<tr>
+<td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>B</kbd> <kbd>⌘</kbd><kbd>⌥</kbd><kbd>I</kbd></td>
+<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>B</kbd> <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>I</kbd></td>
+<td>These are bound to bold and italic. They work both with and without selections. If there is no selection, they will just transform the word under the cursor. These keybindings will unbold/unitalicize selection if it is already bold/italic.</td>
+</tr>
+<tr>
+<td><kbd>⌘</kbd><kbd>^</kbd><kbd>1&hellip;6</kbd></td>
+<td><kbd>Ctrl</kbd><kbd>1&hellip;6</kbd></td>
+<td>These will add the corresponding number of hashmarks for headlines. Works on blank lines and selected text in tandem with the above headline tools. If you select an entire existing headline, the current hashmarks will be removed and replaced with the header level you requested. This command respects the <code>mde.match_header_hashes</code> preference setting.</td>
+</tr>
+<tr>
+<td><kbd>⌥</kbd><kbd>⇧</kbd><kbd>6</kbd></td>
+<td><kbd>Alt</kbd><kbd>Shift</kbd><kbd>6</kbd></td>
+<td>Inserts a footnote.</td>
+</tr>
+<tr>
+<td><kbd>⌘</kbd><kbd>^</kbd><kbd>S</kbd></td>
+<td><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>S</kbd></td>
+<td>Organizes references and footnotes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gfm-specific-features"><a name="user-content-gfm-specific-features" href="#gfm-specific-features" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>GFM Specific Features</h2>
+<p>Underscores in words doesn&rsquo;t mess with bold or italic style:</p>
+<p><img alt="underscore-in-words" src="https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/underscore-in-words.png" /></p>
+<p>Fenced code blocks gets syntax highlighting inside:</p>
+<p><img alt="fenced-code-block" src="https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/fenced-code-block.png" /></p>
+<p>Keyboard shortcuts gets highlighted like in GitHub:</p>
+<p><img alt="keyboard-shortcut" src="https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/keyboard-shortcut.png" /></p>
+<p>Strikethrough is supported:</p>
+<p><img alt="strikethrough" src="https://raw.github.com/SublimeText-Markdown/MarkdownEditing/master/screenshots/strikethrough.png" /></p>
+<h2 id="commands-for-command-palette"><a name="user-content-commands-for-command-palette" href="#commands-for-command-palette" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Commands for Command Palette</h2>
+<h3 id="fix-underlined-headers"><a name="user-content-fix-underlined-headers" href="#fix-underlined-headers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fix Underlined Headers</h3>
+<p>Adjusts every setext-style header to add or remove <code>=</code> or <code>-</code> characters as needed to match the lengths of their header text.</p>
+<h3 id="convert-underlined-headers-to-atx"><a name="user-content-convert-underlined-headers-to-atx" href="#convert-underlined-headers-to-atx" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Convert Underlined Headers to ATX</h3>
+<p>Converts every setext-style header into an ATX style header. If something is selected only the headers in the selections will be converted, otherwise the conversion will be applied to the whole view.</p>
+<h3 id="add-missing-link-labels"><a name="user-content-add-missing-link-labels" href="#add-missing-link-labels" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Add Missing Link Labels</h3>
+<p>Scans document for referenced link usages (<code>[some link][some_ref]</code> and <code>[some link][]</code>) and checks if they are all defined. If there are undefined link references, command will automatically create their definition snippet at the bottom of the file.</p>
+<h3 id="markdown-lint"><a name="user-content-markdown-lint" href="#markdown-lint" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Markdown Lint</h3>
+<p>Performs lint on current Markdown file. See <a href="lint_docs/RULES.md">lint rules</a>. Some of the linting rules are customizable via user settings file.</p>
+<h3 id="switch-list-bullet-type"><a name="user-content-switch-list-bullet-type" href="#switch-list-bullet-type" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Switch List Bullet Type</h3>
+<p>Switches the highlighted list between numbered and bulleted style.</p>
+<h2 id="installation"><a name="user-content-installation" href="#installation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation</h2>
+<blockquote>
+<p><strong>Important Note About Installation</strong></p>
+<p>Are you getting this error after installation: <em><strong>Error loading syntax file</strong> &ldquo;Packages/Markdown/Markdown.tmLanguage&rdquo;: Unable to open Packages/Markdown/Markdown.tmLanguage</em>? This is caused by open markdown files at the install time. You have to <strong>manually change their syntax to your newly installed Markdown syntax</strong>. Read the below paragraph for more details on this.</p>
+</blockquote>
+<p><em>Note</em>: Sublime text has a native tiny package for Markdown. However, when MarkdownEditing is enabled, native package causes some conflicts. For this reason, MarkdownEditing will automatically disable it. Since it doesn&rsquo;t bring anything new over MarkdownEditing, this is not a loss. But remember, when you disable MarkdownEditing, you have to reenable the native one manually (if you want).</p>
+<p>If you are using Sublime Text 2, you have to disable the native package <em>manually</em>. To do that, add <code>Markdown</code> to your <code>ignored_packages</code> list in ST user settings:</p>
+<pre><code>"ignored_packages": [..., "Markdown"],
+</code></pre>
+<h3 id="package-control"><a name="user-content-package-control" href="#package-control" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Package Control</h3>
+<p>The preferred method of installation is via <a href="http://wbond.net/sublime_packages/package_control">Sublime Package Control</a>.</p>
+<ol>
+<li><a href="http://wbond.net/sublime_packages/package_control/installation">Install Sublime Package Control</a></li>
+<li>From inside Sublime Text, open Package Control&rsquo;s Command Pallet: <kbd>CTRL</kbd> <kbd>SHIFT</kbd> <kbd>P</kbd> (Windows, Linux) or <kbd>CMD</kbd> <kbd>SHIFT</kbd> <kbd>P</kbd> on Mac.</li>
+<li>Type <code>install package</code> and hit Return. A list of available packages will be displayed.</li>
+<li>Type <code>MarkdownEditing</code> and hit Return. The package will be downloaded to the appropriate directory.</li>
+<li>Restart Sublime Text to complete installation. Open a Markdown file and this custom theme. The features listed above should now be available.</li>
+</ol>
+<h3 id="manual-installation"><a name="user-content-manual-installation" href="#manual-installation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Manual Installation</h3>
+<ol>
+<li>Download or clone this repository to a directory <code>MarkdownEditing</code> in the Sublime Text Packages directory for your platform:<ul>
+<li>Mac: <code>git clone https://github.com/SublimeText-Markdown/MarkdownEditing.git ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/MarkdownEditing</code></li>
+<li>Windows: <code>git clone https://github.com/SublimeText-Markdown/MarkdownEditing.git %APPDATA%\Sublime/ Text/ 2/\MarkdownEditing</code></li>
+<li>Linux: <code>git clone https://github.com/SublimeText-Markdown/MarkdownEditing.git ~/.Sublime\ Text\ 2/Packages/MarkdownEditing</code></li>
+</ul>
+</li>
+<li>Restart Sublime Text to complete installation. Open a Markdown file and this custom theme. The features listed above should now be available.</li>
+</ol>
+<h2 id="configuration"><a name="user-content-configuration" href="#configuration" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration</h2>
+<p>The plugin contains 3 different Markdown flavors: Standard Markdown, GitHub flavored Markdown, MultiMarkdown. Default is GitHub flavored Markdown. If you want to set another one as default, open a Markdown file and select your flavor from the menu: <code>View &gt; Syntax &gt; Open all with current extension as</code>. You&rsquo;re done.</p>
+<p>You may want to have a look at the default settings files. They are located at:</p>
+<pre><code>Packages/MarkdownEditing/Markdown.sublime-settings         [GitHub flavored Markdown]
+Packages/MarkdownEditing/Markdown (Standard).sublime-settings
+Packages/MarkdownEditing/MultiMarkdown.sublime-settings
+</code></pre>
+<p>If you want to override any of the default settings, you can open the appropriate user settings file using the <code>Preferences &gt; Package Settings &gt; Markdown Editing</code> menu. Each flavor has a different settings file.</p>
+<p>Bold and italic markers are configurable through ST shell variables. You can use <code>Preferences &gt; Package Settings &gt; Markdown Editing</code> menu to see the default settings file. In order to override it, copy &amp; paste its content into the user settings file (<code>Packages/User/Bold and Italic Markers.tmPreferences</code>) from the menu and make your edits. It is pretty straightforward.</p>
+<p>In order to activate the dark or the yellow theme, put one of these lines to your user settings file of the flavor (<code>Packages/User/[flavor].sublime-settings</code>):</p>
+<pre><code>"color_scheme": "Packages/MarkdownEditing/MarkdownEditor-Dark.tmTheme",
+"color_scheme": "Packages/MarkdownEditing/MarkdownEditor-Yellow.tmTheme",
+</code></pre>
+<p>If you want to go with your already existing theme, you can reenable it with the same method as above. Keep in mind that, that theme may not cover all the parts of the Markdown syntax that this plugin defines.</p>
+<h3 id="additional-color-themes"><a name="user-content-additional-color-themes" href="#additional-color-themes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Additional color themes:</h3>
+<ul>
+<li><a href="https://github.com/mdesantis/MarkdownEditing/blob/blackboard-theme/MarkdownEditor-Blackboard.tmTheme">Blackboard theme</a> by <a href="https://github.com/mdesantis">@mdesantis</a></li>
+</ul>
+<p>By default, when you install the plugin, files with these extensions will be assigned to Markdown syntax: &ldquo;md&rdquo;, &ldquo;txt&rdquo;, &ldquo;mdown&rdquo;, &ldquo;markdown&rdquo;, &ldquo;markdn&rdquo;. If you want to prevent any of these extensions to be opened as Markdown, follow these steps:</p>
+<ol>
+<li>Click on the language menu at bottom right</li>
+<li>Select &ldquo;Open all with current extension as&rdquo;</li>
+<li>Choose your preferred syntax for that extension</li>
+</ol>
+<h2 id="tips"><a name="user-content-tips" href="#tips" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tips</h2>
+<p>We are maintaining a <a href="https://github.com/SublimeText-Markdown/MarkdownEditing/wiki/Tips">tips section</a> in our <a href="https://github.com/SublimeText-Markdown/MarkdownEditing/wiki">Wiki</a>. Jump there to learn from others or share your experiences with others.</p>
+<h2 id="similar-plugins"><a name="user-content-similar-plugins" href="#similar-plugins" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Similar Plugins</h2>
+<ul>
+<li>
+<p><a href="https://github.com/aziz/knockdown/">Knockdown</a></p>
+<p>Knockdown offers useful Markdown features and a custom Markdown theme. All of its unique features except its theme are ported to MarkdownEditing and some of them are actually improved further in MarkdownEditing.<br />
+<em> <a href="https://github.com/jonschlinkert/sublime-markdown-extended">Sublime Markdown Extended</a><br />
+</em> <a href="https://github.com/demon386/SmartMarkdown">SmartMarkdown</a></p>
+</li>
+</ul>
+<h2 id="known-bugs"><a name="user-content-known-bugs" href="#known-bugs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Known Bugs</h2>
+<ul>
+<li>
+<p>Setext-style headers (<code>===</code> and <code>---</code>) do not show up in the symbol list. This is due to a Sublime Text limitation (see <a href="https://github.com/SublimeText-Markdown/MarkdownEditing/issues/158">#158</a>). However, we are able to put a placeholder to indicate the existence of the header. We encourage you to use Atx-style headers (<code>#</code>).</p>
+</li>
+<li>
+<p>Installing for the first time while having markdown files opened may cause MarkdownEditing to behave unexpectedly on those files. Close and reopen those files to fix it.</p>
+</li>
+</ul>
+<h2 id="contributing"><a name="user-content-contributing" href="#contributing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Contributing</h2>
+<p>See <code>CONTRIBUTING.md</code> file.</p>
+<h2 id="credits"><a name="user-content-credits" href="#credits" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Credits</h2>
+<p>MarkdownEditing was originally created by <a href="http://brettterpstra.com">Brett Terpstra</a> and has become a community project with the goal of consolidating the best features from the varied collection of Markdown packages for Sublime Text. Current development is headed up by <a href="https://github.com/maliayas">Ali Ayas</a> and <a href="https://github.com/felixhao28">Felix Hao</a>.</p>
+<p>Related blog posts from Brett:<br />
+<em> <a href="http://brettterpstra.com/2012/05/17/markdown-editing-for-sublime-text-2-humble-beginnings/"><a href="http://brettterpstra.com/2012/05/17/markdown-editing-for-sublime-text-2-humble-beginnings/">http://brettterpstra.com/2012/05/17/markdown-editing-for-sublime-text-2-humble-beginnings/</a></a><br />
+</em> <a href="http://brettterpstra.com/2013/11/23/markdownediting-for-sublime-text-updates/">http://brettterpstra.com/2013/11/23/markdownediting-for-sublime-text-updates/</a></p>
+<p>This plugin contains portions of code from <a href="https://github.com/aziz/knockdown/">Knockdown</a>.</p>
+<p>Footnote commands were submitted by <a href="https://github.com/jngeist">J. Nicholas Geist</a> and originated at <a href="http://geekabouttown.com/posts/sublime-text-2-markdown-footnote-goodness">geekabouttown</a>.</p>
+<h2 id="donation"><a name="user-content-donation" href="#donation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Donation</h2>
+<p>You can support <a href="https://github.com/SublimeText-Markdown/MarkdownEditing/graphs/contributors">contributors</a> of this project individually. Every contributor is welcomed to add his/her line below with any content. Ordering shall be alphabetically by GitHub username.</p>
+<ul>
+<li><a href="https://github.com/felixhao28">@felixhao28</a>: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9QV2RFV2J8UZS"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="[paypal]" /></a></li>
+<li><a href="https://github.com/maliayas">@maliayas</a>: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=W2NXRPD43YSCU&amp;lc=TR&amp;item_name=open-source&amp;item_number=markdown-editing&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="[paypal]" /></a> <img alt="donation received" src="http://maliayas.com/business/donation/badge.php?project=markdown_editing" /></li>
+</ul>
+<h2 id="license"><a name="user-content-license" href="#license" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>License</h2>
+<p>MarkdownEditing is released under the <a href="http://www.opensource.org/licenses/MIT">MIT License</a>.</p>
+
+	<a href="#arriba" class="contents">arriba</a>
+	</div>
+	<footer class="container">
+		<p class="text-muted text-center">
+			notas para javier  
+		</p>
+	</footer>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready( function() {
+	$('table').addClass('table table-bordered');
+});
+</script>

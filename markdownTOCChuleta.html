@@ -1,0 +1,146 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+	<title>markdownTOCChuleta</title>
+	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<style type="text/css">
+		body {
+			background-color: #EEE;
+			margin: 2em 0;
+			font-size: 12pt;
+			font-family: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans GB", sans-serif;
+			line-height: 150%;
+		}
+		blockquote {
+			font-size: inherit;
+		}
+		#container {
+			background-color: #FFF;
+			/*box-shadow: 0px 0px 10px #CCC;*/
+			/*border: 3px solid #DDD;*/
+			padding: 1em 2em;
+			box-shadow: 0 0 0.5em #e6e6e6 inset,0 0 0 1px #d3d3d3;
+			border-radius: 0.5em;
+			margin-bottom: 1em;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			border-bottom: 1px solid #EEE;
+			padding-bottom: 0.25em;
+			font-weight: bold;
+			margin-top: 1em;
+		}
+		img {
+			border: 3px solid #e6e6e6;
+			padding: 1em;
+			box-shadow: 0px 0px 10px #d3d3d3;
+		}
+		.contents
+		{
+   			 float: right
+		}
+		@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+			img { zoom: 0.5; }
+		}
+	</style>
+</head>
+<body>
+	<div id="container" class="container">
+	<p class="contents"><a name="arriba" href="miMundo.html">Mi Mundo</a></p>
+		<h1 id="markdowntoc-messages"><a name="user-content-markdowntoc-messages" href="#markdowntoc-messages" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MarkdownTOC Messages</h1>
+<p>This <a href="https://packagecontrol.io/packages/MarkdownTOC">plugin</a> search headings in document and insert TOC(Table Of Contents) to it.<br />
+<!-- MarkdownTOC --></p>
+<ul>
+<li><a href="#markdowntoc">MarkdownTOC</a></li>
+<li><a href="#importante">Importante:</a></li>
+<li><a href="#pruebas">pruebas</a></li>
+<li><a href="#feature">Feature</a></li>
+<li><a href="#using">Using</a></li>
+<li><a href="#depth-control">Depth control</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+
+<h1 id="markdowntoc"><a name="user-content-markdowntoc" href="#markdowntoc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MarkdownTOC</h1>
+<h2 id="importante"><a name="user-content-importante" href="#importante" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Importante:</h2>
+<ul>
+<li>Los cambios en la configuración no requieren reiniciar sublime.</li>
+<li>Va unida la configuración de la propiedad default_bracket del plugin MarkdownTOC en el archivo de configuración &hellip;<br />
+C:\nube\MEGA\portables\sublime\sublime\Data\Packages\MarkdownTOC\MarkdownTOC.sublime-settings<br />
+<code>"default_autolink": true,
+"default_bracket": "round",</code><br />
+&hellip; con la propiedad parser del plugin markdown preview <br />
+C:\nube\MEGA\portables\sublime\sublime\Data\Packages\Markdown Preview\MarkdownPreview.sublime-settings<br />
+<pre><code>&quot;parser&quot;: &quot;default&quot;,
+</code></pre><br />
+me gustaría ponerlo en github porque es más ancho pero no lo consigo<br />
+<code>"parser": "github",</code></li>
+</ul>
+<h1 id="pruebas"><a name="user-content-pruebas" href="#pruebas" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>pruebas</h1>
+<p><a href="pruebas/prueba.html">pruebas</a></p>
+<h2 id="feature"><a name="user-content-feature" href="#feature" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Feature</h2>
+<ul>
+<li>Insert Table of Contents depending on headings in document</li>
+<li>TOC reflects contents from below its position or cursor (when you select &ldquo;Insert TOC&rdquo; menu)</li>
+<li>Auto linking when heading has anchor</li>
+<li>Refresh contents when file is saving</li>
+<li>[Control TOC depth in its comment tags][depth-control]</li>
+</ul>
+<h2 id="using"><a name="user-content-using" href="#using" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Using</h2>
+<ol>
+<li>Open Markdown files.</li>
+<li>Move cursor to position where you want to insert TOC.</li>
+<li>Tools &gt; MarkdownTOC &gt; Insert TOC</li>
+<li>TOC has inserted into document!</li>
+<li>Update contents and save&hellip;</li>
+<li>TOC has been updated.</li>
+</ol>
+<p><strong><em>Don&rsquo;t remove the comment tags if you want to update every time saving.</em></strong></p>
+<h2 id="depth-control"><a name="user-content-depth-control" href="#depth-control" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Depth control</h2>
+<p>You can control TOC depth in its comment tags.</p>
+<p>```<br />
+  <!-- MarkdownTOC depth=2 --></p>
+<ul>
+<li>foo<ul>
+<li>bar</li>
+<li>buz</li>
+</ul>
+</li>
+<li>qux</li>
+</ul>
+<p><!-- /MarkdownTOC --><br />
+<code></code><br />
+  <!-- MarkdownTOC depth=3 --></p>
+<ul>
+<li>foo<ul>
+<li>bar</li>
+<li>qux</li>
+<li>quux</li>
+<li>buz</li>
+</ul>
+</li>
+<li>qux</li>
+</ul>
+<p><!-- /MarkdownTOC --><br />
+  ```</p>
+<p>You can also set default depth in Settings.</p>
+<p>Preference &gt; Package Settings &gt; MarkdownTOC &gt; Settings - User</p>
+<p><code>{
+    "default_depth": 0
+  }</code></p>
+<p><code>depth=0</code> means no limit</p>
+
+	<a href="#arriba" class="contents">arriba</a>
+	</div>
+	<footer class="container">
+		<p class="text-muted text-center">
+			notas para javier  
+		</p>
+	</footer>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready( function() {
+	$('table').addClass('table table-bordered');
+});
+</script>

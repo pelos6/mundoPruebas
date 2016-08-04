@@ -1,0 +1,4 @@
+	"host": "ftp.proyectocarpeta.esy.es",
+		"username": "u552036743.javier",  // or null for anonymous login
+		"password": "javier",
+		"path": "/",

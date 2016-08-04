@@ -1,0 +1,267 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+	<title>packageControlMessagesMarkdownPreview</title>
+	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<style type="text/css">
+		body {
+			background-color: #EEE;
+			margin: 2em 0;
+			font-size: 12pt;
+			font-family: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans GB", sans-serif;
+			line-height: 150%;
+		}
+		blockquote {
+			font-size: inherit;
+		}
+		#container {
+			background-color: #FFF;
+			/*box-shadow: 0px 0px 10px #CCC;*/
+			/*border: 3px solid #DDD;*/
+			padding: 1em 2em;
+			box-shadow: 0 0 0.5em #e6e6e6 inset,0 0 0 1px #d3d3d3;
+			border-radius: 0.5em;
+			margin-bottom: 1em;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			border-bottom: 1px solid #EEE;
+			padding-bottom: 0.25em;
+			font-weight: bold;
+			margin-top: 1em;
+		}
+		img {
+			border: 3px solid #e6e6e6;
+			padding: 1em;
+			box-shadow: 0px 0px 10px #d3d3d3;
+		}
+		.contents
+		{
+   			 float: right
+		}
+		@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+			img { zoom: 0.5; }
+		}
+	</style>
+</head>
+<body>
+	<div id="container" class="container">
+	<p class="contents"><a name="arriba" href="miMundo.html">Mi Mundo</a></p>
+		<h1 id="package-control-messages"><a name="user-content-package-control-messages" href="#package-control-messages" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Package Control Messages</h1>
+<h2 id="markdown-preview"><a name="user-content-markdown-preview" href="#markdown-preview" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Markdown Preview</h2>
+<p>Sublime Text 2/3 Markdown Preview<br />
+  =================================</p>
+<p>Preview and build your markdown files quickly in your web browser from sublime text 2/3. </p>
+<p>You can use builtin <a href="https://github.com/waylan/Python-Markdown">python-markdown</a> parser or use the <a href="https://developer.github.com/v3/markdown/">github markdown API</a> for the conversion.</p>
+<p><strong>NOTE:</strong> If you choose the GitHub API for conversion (set parser: github in your settings), your code will be sent through https to github for live conversion. You&rsquo;ll have <a href="https://help.github.com/articles/github-flavored-markdown/">Github flavored markdown</a>, syntax highlighting and EMOJI support for free <img align="absmiddle" alt=":heart:" class="emoji" height="20px" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2764.png" title=":heart:" width="20px" /> <img align="absmiddle" alt=":octocat:" class="emoji" height="20px" src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" title=":octocat:" width="20px" /> <img align="absmiddle" alt=":gift:" class="emoji" height="20px" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f381.png" title=":gift:" width="20px" />. If you make more than 60 calls a day, be sure to set your GitHub API key in the settings :). You can also get most of this in the default Markdown parser with by enabling certain extensions; see &ldquo;<a href="#parsing-github-flavored-markdown-">Parsing Github Flavored Markdown</a>&rdquo;&rdquo; below for more information.</p>
+<p><strong>LINUX users:</strong> If you want to use GitHub API for conversion, you&rsquo;ll need to have a custom Python install that includes python-ssl as its not built in the Sublime Text 2 Linux package. see <a href="https://github.com/revolunet/sublimetext-markdown-preview/issues/27#issuecomment-11772098">@dusteye comment</a>. If you use a custom window manager, also be sure to set a <code>BROWSER</code> environment variable. see <a href="https://github.com/revolunet/sublimetext-markdown-preview/issues/78#issuecomment-15644727">@PPvG comments</a></p>
+<p>## Features :</p>
+<ul>
+<li>Markdown preview using the <a href="https://github.com/waylan/Python-Markdown">Python-markdown</a> or the Github API just choose select the build commands.</li>
+<li>Syntax highlighting via Pygments. See &ldquo;<a href="#configuring-pygments">Configuring Pygments</a>&rdquo; for more info.</li>
+<li>Build markdown file using Sublime Text build system. The build parser are config via the <code>"parser"</code> config.</li>
+<li>Browser preview auto reload on save if you have the <a href="https://github.com/dz0ny/LiveReload-sublimetext2">ST2 LiveReload plugin</a> installed.</li>
+<li>Builtin parser : supports <code>abbr</code>, <code>attr_list</code>, <code>def_list</code>, <code>fenced_code</code>, <code>footnotes</code>, <code>tables</code>, <code>smart_strong</code>, <code>smarty</code>,  <code>wikilinks</code>, <code>meta</code>, <code>sane_lists</code>, <code>codehilite</code>, <code>nl2br</code>, and <code>toc</code> markdown extensions.</li>
+<li>CSS search path for local and build-in CSS files (always enabled) and/or CSS overriding if you need</li>
+<li>YAML support thanks to @tommi</li>
+<li>Clipboard selection and copy to clipboard thanks to @hexatrope</li>
+<li>MathJax support : \\(\frac{\pi}{2}\\) thanks to @bps10</li>
+<li>HTML template customisation thanks to @hozaka</li>
+<li>Embed images as base64 (see <a href="https://github.com/revolunet/sublimetext-markdown-preview/blob/master/MarkdownPreview.sublime-settings">settings</a> file for more info)</li>
+<li>Strip out multimarkdown critic marks from either Githubs or Python Markdown input source (see <a href="https://github.com/revolunet/sublimetext-markdown-preview/blob/master/MarkdownPreview.sublime-settings">settings</a> file for more info)</li>
+<li>
+<p>3rd party extensions for the Python Markdown parser:</p>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>magiclink</td>
+<td>Find and convert HTML links and email address to links (<a href="http://facelessuser.github.io/pymdown-extensions/extensions/magiclink/">MagicLink Documentation</a>).</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>Surround inline text with <code>~~strike through~~</code> to get del tags <del>strike through</del>.</td>
+</tr>
+<tr>
+<td>insert</td>
+<td>Surround inline text with <code>^^underlined^^</code> to get ins tags <ins>underlined</ins>.</td>
+</tr>
+<tr>
+<td>tasklist</td>
+<td>Github Flavored Markdown tasklists (<a href="http://facelessuser.github.io/pymdown-extensions/extensions/tasklist/">Tasklist Documentation</a>).</td>
+</tr>
+<tr>
+<td>githubemoji</td>
+<td>Support for Github Flavored Markdown emojis (<a href="http://facelessuser.github.io/pymdown-extensions/extensions/githubemoji/">GithubEmoji Documentation</a>).</td>
+</tr>
+<tr>
+<td>headeranchor</td>
+<td>Github Flavored Markdown style header anchors (<a href="http://facelessuser.github.io/pymdown-extensions/extensions/headeranchor/">HeaderAnchor Documentation</a>).</td>
+</tr>
+<tr>
+<td>github</td>
+<td>A convenience extension to add: <code>magiclink</code>, <code>delete</code>, <code>tasklist</code>, <code>githubemoji</code>, <code>headeranchor</code>, <code>superfences</code>, and <code>nl2br</code> to parse and display Markdown in a github-ish way.  It is recommed to pair <code>github</code> with <code>extra</code> and <code>codehilite</code> (with language guessing off) to parse close to github&rsquo;s way.  Be aware of what extensions <code>github</code> loads, because you should not load extensions more than once.</td>
+</tr>
+<tr>
+<td>progressbar</td>
+<td>Create progress bars (<a href="http://facelessuser.github.io/pymdown-extensions/extensions/progressbar/">ProgressBar Documentation</a>).</td>
+</tr>
+<tr>
+<td>superfences</td>
+<td>Allow fenced blocks to be nested under lists, blockquotes, etc. and add special UML diagram blocks (<a href="http://facelessuser.github.io/pymdown-extensions/extensions/superfences/">SuperFences Documentation</a>).</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>## Installation :</p>
+<p>### Using <a href="https://packagecontrol.io/">Package Control</a> (<em>Recommended</em>)</p>
+<p>For all Sublime Text 2/3 users we recommend install via <a href="https://packagecontrol.io/">Package Control</a>.</p>
+<ol>
+<li><a href="https://packagecontrol.io/installation">Install</a> Package Control if you haven&rsquo;t yet.</li>
+<li>Use <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>P</kbd> then <code>Package Control: Install Package</code></li>
+<li>Look for <code>Markdown Preview</code> and install it.</li>
+</ol>
+<p>### Manual Install</p>
+<ol>
+<li>Click the <code>Preferences &gt; Browse Packages…</code> menu</li>
+<li>Browse up a folder and then into the <code>Installed Packages/</code> folder</li>
+<li>Download <a href="https://github.com/revolunet/sublimetext-markdown-preview/archive/master.zip">zip package</a> rename it to <code>Markdown Preview.sublime-package</code> and copy it into the <code>Installed Packages/</code> directory</li>
+<li>Restart Sublime Text</li>
+</ol>
+<p>## Usage :</p>
+<p>### To preview :</p>
+<ul>
+<li>optionally select some of your markdown for conversion</li>
+<li>use <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>P</kbd> then <code>Markdown Preview</code> to show the follow commands (you will be prompted to select which parser you prefer):<ul>
+<li>Markdown Preview: Preview in Browser</li>
+<li>Markdown Preview: Export HTML in Sublime Text</li>
+<li>Markdown Preview: Copy to Clipboard</li>
+<li>Markdown Preview: Open Markdown Cheat sheet</li>
+</ul>
+</li>
+<li>or bind some key in your user key binding, using a line like this one:<br />
+<code>{ "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} },</code> for a specific parser and target or <code>{ "keys": ["alt+m"], "command": "markdown_preview_select", "args": {"target": "browser"} },</code> to bring up the quick panel to select enabled parsers for a given target.</li>
+<li>once converted a first time, the output HTML will be updated on each file save (with LiveReload plugin)</li>
+</ul>
+<p>### Enabling Other External Markdown Parsers :</p>
+<p>External parser commands and arguments should first be mapped to a name.  The path to the binary should be first, followed by flags etc.</p>
+<pre><code class="js">    &quot;markdown_binary_map&quot;: {
+        &quot;multimarkdown&quot;: [&quot;/usr/local/bin/multimarkdown&quot;]
+    },
+</code></pre>
+
+<p>Then the name can be placed in <code>enabled_parsers</code> to enable use of the new parser.</p>
+<pre><code class="js">    &quot;enabled_parsers&quot;: [&quot;markdown&quot;, &quot;github&quot;, &quot;multimarkdown&quot;],
+</code></pre>
+
+<p>### To build :</p>
+<ul>
+<li>Just use <kbd>ctrl</kbd>+<kbd>B</kbd> (Windows/Linux) or <kbd>cmd</kbd>+<kbd>B</kbd> (Mac) to build current file.</li>
+</ul>
+<p>### To config :</p>
+<p>Using Sublime Text menu: <code>Preferences</code>-&gt;<code>Package Settings</code>-&gt;<code>Markdown Preview</code></p>
+<ul>
+<li><code>Settings - User</code> is where you change your settings for Markdown Preview.</li>
+<li><code>Settings - Default</code> is a good reference with detailed descriptions for each setting.</li>
+</ul>
+<p>### Configuring Pygments<br />
+  If you add the codehilite extension manually in the enabled extensions, you can override some of the default settings.</p>
+<ul>
+<li>Turn language guessing <em>on</em> or <em>off</em> (<em>on</em> will highlight fenced blocks even if you don&rsquo;t specify a language)  <code>codehilite(guess_lang=False)</code> (True|False).</li>
+<li>Show line numbers: <code>codehilite(linenums=True)</code> (True|False).</li>
+<li>Change the higlight theme: <code>codehilite(pygments_style=emacs)</code>.</li>
+<li>Inline the CSS: <code>codehilite(noclasses=True)</code> (True|False).</li>
+<li>Use multiple: <code>codehilite(linenums=True, pygments_style-emacs)</code>.</li>
+</ul>
+<p>See <a href="https://pythonhosted.org/Markdown/extensions/code_hilite.html">codehilte page</a> for more info.</p>
+<p>### Meta Data Support<br />
+  When the <code>meta</code> extension is enabled (<a href="https://pythonhosted.org/Markdown/extensions/meta_data.html">https://pythonhosted.org/Markdown/extensions/meta_data.html</a>), the results will be written to the HTML head in the form <code>&lt;meta name="key" content="value1,value2"&gt;</code>.  <code>title</code> is the one exception, and its content will be written to the title tag in the HTML head.</p>
+<p>### YAML Frontmatter Support<br />
+  YAML frontmatter can be stripped out and read when <code>strip_yaml_front_matter</code> is set to  <code>true</code> in the settings file.  In general the, the fronmatter is handled the same as <a href="#meta-data-support">meta data</a>, but if both exist in a file, the YAML keys will override the <code>meta</code> extension keys.  There are a few special keys names that won&rsquo;t be handled as html meta data.</p>
+<p>#### Special YAML Key Names<br />
+  Yaml frontmatter has a few special key names that are used that will not be handled as meta data:</p>
+<ul>
+<li><strong>basepath</strong>: An absolute path to configure the relative paths for images etc. (for when the markdown is supposed to reference images in a different location.)</li>
+<li><strong>references</strong>: Can take a file path or an array of file paths for separate markdown files containing references, footnotes, etc.  Can be an absolute path or relative path.  Relative paths first use the source file&rsquo;s directory, and if the file cannot be found, it will use the <code>basepath</code> setting.</li>
+<li><strong>destination</strong>: This is an absolute file path or relative file path for when the markdown is saved to html via the build command or the <code>Save to HTML</code> command.  Relative paths first use the source file&rsquo;s directory, and if the file cannot be found, it will use the <code>basepath</code> setting.</li>
+<li><strong>settings</strong>: This is a dictionary where you can override settings that are in the settings file.</li>
+</ul>
+<p>#### Example<br />
+  <pre><code class="yaml">---
+    # Builtin values
+    references:
+        - references.md
+        - abbreviations.md
+        - footnotes.md
+
+    destination: destination.html
+
+    # Meta Data
+    title: Test Page
+    author:
+        - John Doe
+        - Jane Doe
+
+    # Settings overrides
+    settings:
+        enabled_extensions:
+        - extra
+        - github
+        - toc
+        - headerid
+        - smarty(smart_quotes=False) # smart quotes interferes with attr_list
+        - meta
+        - wikilinks
+        - admonition
+        - codehilite(guess_lang=False,pygments_style=github)
+---
+</code></pre></p>
+<p>### Parsing Github Flavored Markdown :<br />
+  Github Flavored Mardown (GFM) is a very popular markdown.  Markdown Preview can actually handle them in a couple of ways: online and offline.</p>
+<p>#### Online :<br />
+  Parsing GFM using the online method requires using the Github API as the parser.  It may also require setting <code>github_mode</code> to <code>gfm</code> to get things like tasklists to render properly.</p>
+<p>#### Offline :<br />
+  By default almost all extensions are enabled to help with the github feel, but there are some tweaks needed to get the full experience.</p>
+<p>GFM does not auto guess language in fenced blocks, but Markdown Preview does this by default.  You can fix this in one of two ways:</p>
+<ol>
+<li>Disable auto language guessing in the settings file <code>"guess_language": false,</code></li>
+<li>Or if you are manually defining extensions: <code>"enabled_extensions": ["codehilite(guess_lang=False,pygments_style=github)"]</code></li>
+</ol>
+<p>As mentioned earlier, almost all extensions are enabled by default, but as a reference, the minimum extensions that should be enabled are listed below:</p>
+<pre><code class="javascript">  &quot;enabled_extensions&quot;: [
+      &quot;extra&quot;,
+      &quot;github&quot;,
+      &quot;codehilite(guess_lang=False,pygments_style=github)&quot;
+  ]
+</code></pre>
+
+<p>This may be further enhanced in the future.</p>
+<p>## Support :</p>
+<ul>
+<li>Any bugs about Markdown Preview please feel free to report <a href="https://github.com/revolunet/sublimetext-markdown-preview/issues">here</a>.</li>
+<li>And you are welcome to fork and submit pullrequests.</li>
+</ul>
+<p>## License :</p>
+<p>The code is available at github <a href="https://github.com/revolunet/sublimetext-markdown-preview">project</a> under <a href="http://revolunet.mit-license.org">MIT licence</a>.</p>
+
+	<a href="#arriba" class="contents">arriba</a>
+	</div>
+	<footer class="container">
+		<p class="text-muted text-center">
+			notas para javier  
+		</p>
+	</footer>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready( function() {
+	$('table').addClass('table table-bordered');
+});
+</script>
